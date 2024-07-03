@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    let arrNum = [];
+    let sumEven = 0;
+    let sumOdd = 0;
+    let number = parseInt(prompt("Nhập số n phần tử:"));
+    while(number > 20 || number < 0) {
+         number = parseInt(prompt("Nhập số n phần tử:"));
+    }
+    for (let i = 0; i < number; i++) {
+        element = parseInt(prompt("Nhập giá trị của phần tử thứ " + i));
+        arrNum[i] = element;
+    }
+
+    for (let i = 0; i < arrNum.length; i++) {
+        if (arrNum[i] % 2 == 0) {
+            sumEven += arrNum[i];
+        } else {
+            sumOdd += arrNum[i];
+        }
+    }
+
+    document.write("Mảng: " + arrNum + "<br>");
+    document.write(" Kết quả = " + (sumEven - sumOdd));
+
+</script>
+</body>
+</html>
