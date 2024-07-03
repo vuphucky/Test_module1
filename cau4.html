@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 4</title>
+</head>
+<body>
+<script>
+    class Mobile{
+        constructor(id,name,brand,price) {
+            this.id = id.toString();
+            this.name = name.toString();
+            this.brand = brand.toString();
+            this.price = price
+        }
+
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getId(){
+            return this.id;
+        }
+        setId(id) {
+            this.id = id;
+        }
+        getBrand(){
+            return this.brand;
+        }
+        setBrand(brand){
+            this.brand = brand;
+        }
+        getPrice(){
+            return this.price;
+        }
+        setPrice(price){
+            this.price = price;
+        }
+
+        toString(){
+            let showInfor = "Id:  " + this.id + "  " + " Name:  " + this.name + "  " + " Brand:  " + this.brand + "  " + " Price:  " + this.price;
+            return showInfor;
+        }
+    }
+
+    let iphone = new Mobile("Phone 1", "15 Pro Max", "Iphone", 5000);
+    let samsung = new Mobile("Phone 2", "Galaxy 12", "Samsung", 2500);
+    let nokia = new Mobile("Phone 3", "Nokia Lumia", "Nokia", 1000);
+
+    document.write(iphone.toString() + "<br>");
+    document.write(samsung.toString() + "<br>");
+    document.write(nokia.toString() + "<br>" + "<br>");
+
+    let arrayPhone = [iphone.toString(), samsung.toString(), nokia.toString()];
+    document.write(arrayPhone.sort());
+
+</script>
+</body>
+</html>
